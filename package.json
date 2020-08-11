@@ -1,22 +1,29 @@
 {
-  "name": "rollup-starter-lib",
+  "name": "nested-groupby",
   "version": "1.0.0",
-  "main": "dist/how-long-till-lunch.cjs.js",
-  "module": "dist/how-long-till-lunch.esm.js",
-  "browser": "dist/how-long-till-lunch.umd.js",
+  "main": "dist/nested-groupby.cjs.js",
+  "module": "dist/nested-groupby.esm.js",
+  "browser": "dist/nested-groupby.umd.js",
+  "author": "Marcus T. Hellams",
+  "description": "A multi-level groupBy for arrays. Nesting allows elements in an array to be grouped into a hierarchical tree structure; think of it like the GROUP BY operator in SQL, except you can have multiple levels of grouping, and the resulting output is a tree rather than a flat table. The levels in the tree are specified by key functions.",
   "dependencies": {
-    "ms": "^2.0.0"
+    "lodash.groupby": "^4.6.0",
+    "lodash.mapvalues": "^4.6.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "rollup": "^1.29.0"
   },
   "scripts": {
+    "clean": "node scripts/removeDist.js",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "node test/test.js",
-    "pretest": "npm run build"
+    "pretest": "npm run build",
+    "build:remove": "run-s clean build"
   },
   "files": [
     "dist"

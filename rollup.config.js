@@ -7,13 +7,13 @@ export default [
 	{
 		input: 'src/main.js',
 		output: {
-			name: 'howLongUntilLunch',
+			name: 'nestedGroupby',
 			file: pkg.browser,
 			format: 'umd'
 		},
 		plugins: [
-			resolve(), // so Rollup can find `ms`
-			commonjs() // so Rollup can convert `ms` to an ES module
+			resolve(), // so Rollup can find `lodash.groupBy and lodash.mapValues`
+			commonjs() // so Rollup can convert `lodash.groupBy and lodash.mapValues` to an ES module
 		]
 	},
 
@@ -25,7 +25,6 @@ export default [
 	// `file` and `format` for each target)
 	{
 		input: 'src/main.js',
-		external: ['ms'],
 		output: [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' }
