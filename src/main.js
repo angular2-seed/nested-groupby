@@ -8,6 +8,6 @@ export default function nestedGroupBy(seq, keys) {
 	const first = keys[0];
 	const rest = keys.slice(1);
 	return mapValues(groupBy(seq, first), function (value) {
-		return nest(value, rest);
+		return nestedGroupBy(value, rest);
 	});
 };
