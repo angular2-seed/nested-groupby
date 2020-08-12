@@ -1,6 +1,6 @@
 {
   "name": "nested-groupby",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/nested-groupby.cjs.js",
   "module": "dist/nested-groupby.esm.js",
   "browser": "dist/nested-groupby.umd.js",
@@ -10,7 +10,7 @@
     "lodash.groupby": "^4.6.0",
     "lodash.mapvalues": "^4.6.0"
   },
-  "repository":"https://github.com/MarcusTHellams/nested-groupby",
+  "repository": "https://github.com/MarcusTHellams/nested-groupby",
   "homepage": "https://github.com/MarcusTHellams/nested-groupby",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",
